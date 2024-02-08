@@ -1,0 +1,87 @@
+/* define headings */
+.heading-l , .heading-m , .heading-s {
+    font-family: 'Fraunces';
+}
+
+.heading-l{
+    font-size: 5rem;
+    line-height: 1em;
+    @include mq( $tablet-breakpoint ){
+        font-size: 3.75rem;
+    }
+    @include mq( $mobile-breakpoint ){
+        font-size: 3.125rem;
+    }
+}
+
+.heading-m{
+    font-size: 3.5rem;
+    line-height: 1.142em;
+    @include mq( $tablet-breakpoint ){
+        font-size: 3rem;
+        line-height: 1.166666em;
+    }
+    @include mq( $mobile-breakpoint ){
+        font-size: 2rem;
+        line-height: 1.5em;
+    }
+
+}
+
+.heading-s{
+    font-size: 2rem;
+    line-height: 1.25em;
+    @include mq( $tablet-breakpoint ){
+        font-size: 1.75rem;
+        line-height: 1.285em;
+    }
+
+}
+
+/* define paragraphs */
+.text{
+    font-family: 'Manrope';
+    font-size: 1.125rem;
+    line-height: 1.777777em;
+    @include mq( $tablet-breakpoint  ){
+        font-size: 1rem;
+        line-height: 1.75em;
+    }
+}
+
+/* defing buttons */
+.btn{
+
+    &--primary{
+        background-color: $light-cyan;
+        border: 2px solid $light-cyan;
+        &:hover{
+            background-color: transparent;
+            color: $light-cyan;
+        }
+    }
+
+    &--secondary{
+        padding-left : 0;
+        padding-right: 0;
+
+        color: $white;
+        // border-bottom: 2px solid $light-cyan;
+        background-color: transparent;
+        position: relative;
+        &::after{
+            content: '';
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            left: 0;
+            bottom: calc(50% - 1em);
+            
+            background-color: $light-cyan;
+        }
+        &:hover{
+            color: $light-cyan;
+        }
+    }
+}
+
